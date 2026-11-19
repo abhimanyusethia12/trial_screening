@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prescreen demo</title>
+<style>
+  :root { --bg: #eef0f3; --surface: #fff; --text: #16191d; --muted: #5b6470; --line: #dde1e6; --radius: 6px; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--bg); color: var(--text); font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; }
+  .stage { display: grid; grid-template-columns: auto 1fr; gap: 20px; height: 100vh; padding: 16px; }
+  .col { display: flex; flex-direction: column; min-height: 0; }
+  .label { font-size: 12.5px; font-weight: 600; color: var(--muted); margin: 0 0 8px 2px; display: flex; justify-content: space-between; gap: 12px; }
+  .label a { color: var(--muted); font-weight: 500; }
+  .phone { width: 390px; flex: 1; min-height: 0; max-height: 844px; border: 1px solid #c4cad2; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+  .desk { flex: 1; min-height: 0; border: 1px solid #c4cad2; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="col">
+    <p class="label"><span>Patient · phone</span><a href="#" id="restart-patient">Reload</a></p>
+    <div class="phone"><iframe id="patient" src="patient.html" title="Patient app" allow="cross-origin-isolated"></iframe></div>
+  </div>
+  <div class="col">
+    <p class="label"><span>Trial site · desktop</span><a href="#" id="reset">Clear prototype data</a></p>
+    <div class="desk"><iframe id="site" src="site.html" title="Site console"></iframe></div>
+  </div>
+</div>
+<script>
+  // Both frames share this origin's storage, so a referral sent on the left appears on the right.
+  document.getElementById("restart-patient").onclick = (e) => { e.preventDefault(); document.getElementById("patient").src = "patient.html"; };
+  document.getElementById("reset").onclick = (e) => {
+    e.preventDefault();
+    if (!confirm("Clear all referrals, activity and trial changes?")) return;
+    try { ["prescreen.trials.v1", "prescreen.referrals.v1", "prescreen.log.v1"].forEach((k) => localStorage.removeItem(k)); } catch {}
+    document.getElementById("site").contentWindow.location.reload();
+  };
+</script>
+</body>
+</html>

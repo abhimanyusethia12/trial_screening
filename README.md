@@ -18,6 +18,7 @@ Open in **Brave or Chrome** (the notes model needs WebGPU):
 |---|---|---|
 | `/patient.html` | Patient (mobile) | Add a record → check on device → questions one at a time → submit → results and next steps → consent and send |
 | `/site.html` | Site coordinator | Referrals to contact (with full evaluation), trials (pause/resume, criteria, add from ClinicalTrials.gov), anonymous activity log |
+| `/demo.html` | Recording | Patient app in a phone frame beside the site console, in one tab |
 | `/legacy.html` | Demo detail | Every criterion, compiled check and evidence for one patient |
 
 First run downloads the model (Qwen2.5 3B, about 2 GB) once; after that it starts in a few seconds and works offline.
