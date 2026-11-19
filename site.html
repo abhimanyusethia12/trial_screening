@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prescreen Site Console</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f5fbf'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <strong>Prescreen</strong>
+      <span class="muted">Site console · prototype</span>
+    </div>
+    <span class="muted small-text" id="sync">Referrals arrive here only when a patient consents</span>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-view="inbox" aria-selected="true">Referrals <span class="muted" id="n-inbox"></span></button>
+    <button role="tab" data-view="trials" aria-selected="false">Trials <span class="muted" id="n-trials"></span></button>
+    <button role="tab" data-view="activity" aria-selected="false">Activity log</button>
+  </nav>
+  <main id="view"></main>
+  <footer class="foot"><button class="linklike" id="reset">Clear prototype data</button></footer>
+  <script type="module" src="site.js"></script>
+</body>
+</html>

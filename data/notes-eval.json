@@ -1,0 +1,24 @@
+{
+  "about": "Hand-labelled expected answers for the notes model on the 3 synthetic patients. Each case lists the acceptable answers. A wrong yes/no is a critical error; an answer outside the set that is not_mentioned only costs a question to the patient.",
+  "statements": {
+    "t1d": "The patient has type 1 diabetes, a secondary form of diabetes, or a history of diabetic ketoacidosis or hyperosmolar coma.",
+    "retino": "The patient is receiving or expected to receive treatment for diabetic retinopathy or macular edema.",
+    "hypo": "The patient had more than one severe hypoglycemia episode in the last 6 months, or has hypoglycemia unawareness.",
+    "gi": "The patient has a significant upper gastrointestinal condition or chronically takes a medicine that affects stomach emptying.",
+    "panc": "The patient has a history of pancreatitis.",
+    "hf": "The patient has severe heart failure (NYHA class IV).",
+    "mtc2": "The patient or a family member has had medullary thyroid cancer or multiple endocrine neoplasia type 2 (MEN2).",
+    "ckd": "The patient has kidney disease that is not caused by diabetes.",
+    "dial": "The patient is on dialysis, has had a kidney transplant, or received immunosuppressive therapy for kidney disease.",
+    "diet": "The patient has tried to lose weight with diet or exercise without lasting success.",
+    "endo": "The patient's obesity is caused by an endocrine disorder.",
+    "surg": "The patient has had or is planning weight-loss surgery, an endoscopic procedure or a weight-loss device.",
+    "cancer": "The patient has had cancer in the past 5 years.",
+    "mtc": "The patient or a family member has had medullary thyroid cancer."
+  },
+  "expected": {
+    "elena-marsh": { "t1d": ["not_mentioned", "no"], "retino": ["no"], "hypo": ["no"], "gi": ["no", "not_mentioned"], "panc": ["no"], "hf": ["no"], "mtc2": ["no", "not_mentioned"], "ckd": ["not_mentioned"], "dial": ["not_mentioned"], "diet": ["not_mentioned"], "endo": ["not_mentioned"], "surg": ["not_mentioned"], "cancer": ["not_mentioned", "no"], "mtc": ["no", "not_mentioned"] },
+    "rahul-venkat": { "t1d": ["not_mentioned", "no"], "retino": ["not_mentioned"], "hypo": ["no", "not_mentioned"], "gi": ["not_mentioned"], "panc": ["no"], "hf": ["not_mentioned"], "mtc2": ["yes"], "ckd": ["no", "not_mentioned"], "dial": ["no"], "diet": ["not_mentioned"], "endo": ["not_mentioned"], "surg": ["not_mentioned"], "cancer": ["not_mentioned"], "mtc": ["yes"] },
+    "maya-okafor": { "t1d": ["not_mentioned", "no"], "retino": ["not_mentioned"], "hypo": ["not_mentioned"], "gi": ["not_mentioned"], "panc": ["no"], "hf": ["not_mentioned"], "mtc2": ["no"], "ckd": ["not_mentioned"], "dial": ["not_mentioned"], "diet": ["yes"], "endo": ["no"], "surg": ["no"], "cancer": ["no"], "mtc": ["no"] }
+  }
+}

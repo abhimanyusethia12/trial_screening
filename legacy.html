@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prescreen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <strong>Prescreen</strong>
+      <span class="muted">On-device clinical trial pre-screening · prototype with synthetic data</span>
+    </div>
+    <dl class="status">
+      <div><dt>Model</dt><dd><span id="model-status">Not loaded</span> <button id="load-model" class="small">Load on-device model</button></dd></div>
+      <div><dt>Network</dt><dd id="net-status">—</dd></div>
+      <div><dt>Network requests during last check</dt><dd id="req-count">—</dd></div>
+    </dl>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-view="patient" aria-selected="true">Patient app</button>
+    <button role="tab" data-view="site" aria-selected="false">Site inbox <span id="inbox-count" class="muted"></span></button>
+  </nav>
+
+  <main>
+    <section id="view-patient" class="layout">
+      <aside class="panel">
+        <h2>Health record</h2>
+        <label class="field">Patient
+          <select id="patient-select"></select>
+        </label>
+        <label class="field">Or load your own FHIR bundle (.json)
+          <input type="file" id="file-input" accept=".json,application/json">
+        </label>
+        <div id="record"></div>
+        <button id="run" class="primary">Check eligibility on this device</button>
+        <p id="progress" class="hint">Runs inside this browser tab. The record is never uploaded.</p>
+      </aside>
+
+      <div class="col">
+        <div class="panel">
+          <h2>Recruiting trials <span class="muted" id="trial-source"></span></h2>
+          <div id="trials"></div>
+        </div>
+        <div class="panel" id="detail" hidden></div>
+      </div>
+    </section>
+
+    <section id="view-site" hidden>
+      <div class="panel">
+        <div class="row-between">
+          <h2>Verified referrals received</h2>
+          <button id="clear-inbox" class="small">Clear inbox</button>
+        </div>
+        <p class="hint">Prototype: referrals are delivered to this local inbox. There is no server.</p>
+        <div id="inbox"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

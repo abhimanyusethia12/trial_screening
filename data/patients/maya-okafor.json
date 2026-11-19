@@ -1,0 +1,232 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p-maya",
+        "name": [
+          {
+            "given": [
+              "Maya"
+            ],
+            "family": "Okafor",
+            "text": "Maya Okafor"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-11-02",
+        "meta": {
+          "tag": [
+            {
+              "code": "synthetic",
+              "display": "Synthetic test patient"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "691577ee-5b5b-4277-b800-d1b5ae525784",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "414916001",
+              "display": "Obesity"
+            }
+          ],
+          "text": "Obesity"
+        },
+        "onsetDateTime": "2020-01-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5d96ce20-01bd-462d-bd09-e687617879c4",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "714628002",
+              "display": "Prediabetes"
+            }
+          ],
+          "text": "Prediabetes"
+        },
+        "onsetDateTime": "2024-03-02"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cc969f42-1bbd-419d-a189-294fb0c437e3",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "78275009",
+              "display": "Obstructive sleep apnea"
+            }
+          ],
+          "text": "Obstructive sleep apnea"
+        },
+        "onsetDateTime": "2024-05-20"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "80681680-0d11-413d-b040-4d5f92e806f6",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "valueQuantity": {
+          "value": 6.0,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-07-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a5302090-198f-4d2d-a462-753a2c3731fb",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "valueQuantity": {
+          "value": 36.2,
+          "unit": "kg/m2"
+        },
+        "effectiveDateTime": "2026-10-05"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "65ae91e3-b124-471c-b572-11dfee5a4611",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 99.5,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-07-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9a22f44c-a1b6-4d05-823e-3ae730aa4d84",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 98.9,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-10-05"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "efac10ad-8a78-43cb-ac58-b7f64cdcbf2c",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/p-maya"
+        },
+        "description": "Weight management consult",
+        "date": "2026-10-05",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "V2VpZ2h0IG1hbmFnZW1lbnQgY29uc3VsdCwgNSBPY3QgMjAyNi4gQk1JIDM2LjIuIENvbXBsZXRlZCBhIDYtbW9udGggc3RydWN0dXJlZCBkaWV0IGFuZCB3YWxraW5nIHByb2dyYW1tZSBpbiAyMDI1IHdpdGggbGVzcyB0aGFuIDIga2cgd2VpZ2h0IGxvc3MuIE5vIHByaW9yIGJhcmlhdHJpYyBzdXJnZXJ5IG9yIHdlaWdodC1sb3NzIGRldmljZXMsIGFuZCBub25lIHBsYW5uZWQuIFRoeXJvaWQgZnVuY3Rpb24gbm9ybWFsOyBubyBlbmRvY3JpbmUgY2F1c2Ugb2Ygb2Jlc2l0eSBpZGVudGlmaWVkLiBObyBwZXJzb25hbCBvciBmYW1pbHkgaGlzdG9yeSBvZiB0aHlyb2lkIGNhbmNlci4gTm8gaGlzdG9yeSBvZiBjYW5jZXIuIE5vIGhpc3Rvcnkgb2YgcGFuY3JlYXRpdGlzLiBEaWFnbm9zZWQgd2l0aCBvYnN0cnVjdGl2ZSBzbGVlcCBhcG5lYSBpbiAyMDI0LCB1c2VzIENQQVAuIEhiQTFjIDYuMCUgaW4gcHJlZGlhYmV0ZXMgcmFuZ2U7IG5vIGRpYWJldGVzIGRpYWdub3Npcy4="
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

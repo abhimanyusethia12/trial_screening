@@ -1,0 +1,855 @@
+{
+  "compiledAt": "2026-11-19",
+  "source": "ClinicalTrials.gov API v2, recruiting interventional studies",
+  "note": "Criteria text is quoted from each registry entry. Rules were compiled from that public text; criteria the registry marks as 'further criteria apply' are not covered.",
+  "trials": [
+    {
+      "nctId": "NCT07662044",
+      "title": "Elecoglipron alone or with dapagliflozin vs placebo in adults with type 2 diabetes",
+      "sponsor": "AstraZeneca",
+      "phase": "Phase 3",
+      "criteria": [
+        {
+          "id": "az-i1",
+          "kind": "inclusion",
+          "text": "Diagnosed with Type 2 Diabetes Mellitus (T2DM) for at least 90 days prior to screening",
+          "rule": {
+            "type": "condition",
+            "codes": [
+              "44054006"
+            ],
+            "label": "Type 2 diabetes",
+            "minDurationDays": 90
+          }
+        },
+        {
+          "id": "az-i2",
+          "kind": "inclusion",
+          "text": "T2DM inadequately managed with lifestyle management alone or on stable treatment with other background glucose-lowering medication",
+          "rule": {
+            "type": "ask"
+          },
+          "ask": "Have your diabetes medicines and doses stayed the same for at least the last 3 months (or do you take no diabetes medicines)?"
+        },
+        {
+          "id": "az-i3",
+          "kind": "inclusion",
+          "text": "HbA1c value of ≥ 7% to ≤ 10.5% (53 to 91.3 mmol/mol)",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "4548-4"
+            ],
+            "label": "HbA1c",
+            "unit": "%",
+            "min": 7,
+            "max": 10.5,
+            "maxAgeDays": 90
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "az-i4",
+          "kind": "inclusion",
+          "text": "Body mass index (BMI) of ≥ 23 kg/m2 at screening",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "39156-5"
+            ],
+            "label": "BMI",
+            "unit": "kg/m2",
+            "min": 23,
+            "maxAgeDays": 365
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "az-i5",
+          "kind": "inclusion",
+          "text": "Stable body weight (self-reported or documented) for 90 days prior to screening",
+          "rule": {
+            "type": "weightStable",
+            "days": 90,
+            "maxPct": 5,
+            "assumption": "Stable taken as a change of 5% or less"
+          },
+          "ask": "Has your weight stayed roughly the same (within about 5%) over the last 3 months?"
+        },
+        {
+          "id": "az-e1",
+          "kind": "exclusion",
+          "text": "Type 1 diabetes, secondary forms of diabetes (including congenital forms), or history of ketoacidosis or hyperosmolar coma",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "condition",
+                "codes": [
+                  "46635009",
+                  "420422005"
+                ],
+                "label": "Type 1 diabetes or diabetic ketoacidosis"
+              },
+              {
+                "type": "notes",
+                "statement": "The patient has type 1 diabetes, a secondary form of diabetes, or a history of diabetic ketoacidosis or hyperosmolar coma.",
+                "terms": [
+                  "type 1",
+                  "ketoacidosis",
+                  "DKA",
+                  "hyperosmolar",
+                  "secondary diabetes",
+                  "LADA"
+                ]
+              }
+            ]
+          },
+          "ask": "Have you ever been told you have type 1 diabetes, or been treated for diabetic ketoacidosis (DKA)?"
+        },
+        {
+          "id": "az-e2",
+          "kind": "exclusion",
+          "text": "Currently receiving or anticipated to receive, therapeutic intervention for diabetic retinopathy and/or macular edema",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient is receiving or expected to receive treatment for diabetic retinopathy or macular edema.",
+            "terms": [
+              "retinopathy",
+              "macular",
+              "eye exam",
+              "ophthalm",
+              "laser",
+              "anti-VEGF"
+            ]
+          },
+          "ask": "Are you being treated, or about to be treated, for diabetic eye disease (retinopathy or macular edema)?"
+        },
+        {
+          "id": "az-e3",
+          "kind": "exclusion",
+          "text": "Have had more than one episode of severe hypoglycemia within 180 days prior to screening or has a history of hypoglycemia unawareness or poor recognition of hypoglycemic symptoms",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient had more than one severe hypoglycemia episode in the last 6 months, or has hypoglycemia unawareness.",
+            "terms": [
+              "hypoglyc",
+              "low blood sugar",
+              "hypo unawareness"
+            ]
+          },
+          "ask": "In the last 6 months, have you had more than one severe low blood sugar episode, or do you often not notice when your blood sugar is low?"
+        },
+        {
+          "id": "az-e4",
+          "kind": "exclusion",
+          "text": "Clinically significant condition affecting the upper GI tract or chronic use of any medication that affects gastric motility or gastric emptying",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has a significant upper gastrointestinal condition or chronically takes a medicine that affects stomach emptying.",
+            "terms": [
+              "gastro",
+              "gastroparesis",
+              "stomach",
+              "oesophag",
+              "esophag",
+              "reflux",
+              "dyspepsia",
+              "gastric emptying"
+            ]
+          },
+          "ask": "Do you have a significant stomach or oesophagus condition, or regularly take medicine that affects stomach emptying?"
+        },
+        {
+          "id": "az-e5",
+          "kind": "exclusion",
+          "text": "History of acute or chronic pancreatitis",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "condition",
+                "codes": [
+                  "197456007",
+                  "235494005"
+                ],
+                "label": "Pancreatitis"
+              },
+              {
+                "type": "notes",
+                "statement": "The patient has a history of pancreatitis.",
+                "terms": [
+                  "pancreatitis"
+                ]
+              }
+            ]
+          },
+          "ask": "Have you ever had pancreatitis?"
+        },
+        {
+          "id": "az-e6",
+          "kind": "exclusion",
+          "text": "Severe congestive heart failure (New York Heart Association IV)",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has severe heart failure (NYHA class IV).",
+            "terms": [
+              "heart failure",
+              "NYHA",
+              "cardiac failure",
+              "ejection fraction",
+              "HFrEF"
+            ]
+          },
+          "ask": "Have you been diagnosed with severe heart failure?"
+        },
+        {
+          "id": "az-e7",
+          "kind": "exclusion",
+          "text": "History/family history of medullary thyroid cancer or multiple endocrine neoplasia type 2",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient or a family member has had medullary thyroid cancer or multiple endocrine neoplasia type 2 (MEN2).",
+            "terms": [
+              "medullary thyroid",
+              "MTC",
+              "MEN2",
+              "MEN 2",
+              "multiple endocrine",
+              "thyroid cancer",
+              "thyroid carcinoma"
+            ]
+          },
+          "ask": "Have you or anyone in your family had medullary thyroid cancer or MEN2?"
+        }
+      ]
+    },
+    {
+      "nctId": "NCT07668388",
+      "title": "Different doses of UBT251 to lower blood sugar in type 2 diabetes",
+      "sponsor": "Novo Nordisk A/S",
+      "phase": "Phase 2",
+      "criteria": [
+        {
+          "id": "ubt-i1",
+          "kind": "inclusion",
+          "text": "Age 18-75 years (both inclusive) at the time of signing the informed consent.",
+          "rule": {
+            "type": "age",
+            "min": 18,
+            "max": 75
+          }
+        },
+        {
+          "id": "ubt-i2",
+          "kind": "inclusion",
+          "text": "Diagnosed with type 2 diabetes greater than or equal to (≥) 180 days before screening.",
+          "rule": {
+            "type": "condition",
+            "codes": [
+              "44054006"
+            ],
+            "label": "Type 2 diabetes",
+            "minDurationDays": 180
+          }
+        },
+        {
+          "id": "ubt-i3",
+          "kind": "inclusion",
+          "text": "Stable daily dose(s) ≥ 90 days before screening of metformin with or without sodium-glucose cotransporter-2 (SGLT2) inhibitor.",
+          "rule": {
+            "type": "medRegimen",
+            "required": [
+              "biguanide"
+            ],
+            "allowed": [
+              "biguanide",
+              "sglt2"
+            ],
+            "minDays": 90
+          }
+        },
+        {
+          "id": "ubt-i4",
+          "kind": "inclusion",
+          "text": "HbA1c of 7.0-10.5 percent (%) (both inclusive) as assessed by central laboratory at screening.",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "4548-4"
+            ],
+            "label": "HbA1c",
+            "unit": "%",
+            "min": 7,
+            "max": 10.5,
+            "maxAgeDays": 90
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "ubt-i5",
+          "kind": "inclusion",
+          "text": "Body mass index between 25.0 kg/m^2 and 50.0 kg/m^2 (both inclusive) at screening.",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "39156-5"
+            ],
+            "label": "BMI",
+            "unit": "kg/m2",
+            "min": 25,
+            "max": 50,
+            "maxAgeDays": 365
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "ubt-e1",
+          "kind": "exclusion",
+          "text": "Treatment with any medication for the indication of diabetes or obesity other than stated in the inclusion criteria within 90 days before screening.",
+          "rule": {
+            "type": "med",
+            "classes": [
+              "insulin",
+              "glp1",
+              "dpp4",
+              "sulfonylurea",
+              "tzd"
+            ],
+            "label": "Insulin, GLP-1, DPP-4, sulfonylurea or TZD"
+          }
+        },
+        {
+          "id": "ubt-e2",
+          "kind": "exclusion",
+          "text": "Uncontrolled and potentially unstable diabetic retinopathy or maculopathy, verified by an eye examination within 90 days before screening.",
+          "rule": {
+            "type": "site",
+            "reason": "Eye examination at screening"
+          }
+        },
+        {
+          "id": "ubt-e3",
+          "kind": "exclusion",
+          "text": "Known hypoglycaemic unawareness as indicated by the investigator according to Clarke's questionnaire, question 8.",
+          "rule": {
+            "type": "site",
+            "reason": "Investigator questionnaire at screening"
+          }
+        }
+      ]
+    },
+    {
+      "nctId": "NCT07271186",
+      "title": "ALN-ANG3 in adults with diabetic kidney disease",
+      "sponsor": "Regeneron Pharmaceuticals",
+      "phase": "Phase 2",
+      "criteria": [
+        {
+          "id": "reg-i0",
+          "kind": "inclusion",
+          "text": "Age 18 to 80 years",
+          "rule": {
+            "type": "age",
+            "min": 18,
+            "max": 80
+          }
+        },
+        {
+          "id": "reg-i1",
+          "kind": "inclusion",
+          "text": "Medical history of type 2 diabetes and receiving medical therapy or lifestyle interventions for glucose management",
+          "rule": {
+            "type": "condition",
+            "codes": [
+              "44054006"
+            ],
+            "label": "Type 2 diabetes"
+          }
+        },
+        {
+          "id": "reg-i2",
+          "kind": "inclusion",
+          "text": "Hemoglobin A1C (HbA1c) of 6.5 to 10% at screening",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "4548-4"
+            ],
+            "label": "HbA1c",
+            "unit": "%",
+            "min": 6.5,
+            "max": 10,
+            "maxAgeDays": 90
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "reg-i3",
+          "kind": "inclusion",
+          "text": "eGFR 30 to 90 mL/min/1.73 m^2 (CKD-EPI eGFRcr-cys equation) at screening",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "98980-6",
+              "98979-8",
+              "62238-1",
+              "33914-3"
+            ],
+            "label": "eGFR",
+            "unit": "mL/min/1.73m2",
+            "min": 30,
+            "max": 90,
+            "maxAgeDays": 180,
+            "assumption": "Record eGFR may use a different equation; site recomputes with creatinine and cystatin C"
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "reg-i4",
+          "kind": "inclusion",
+          "text": "Albuminuria: Urine Albumin to Creatinine Ratio (UACR) of 500 to 5000 mg/g at screening",
+          "rule": {
+            "type": "lab",
+            "codes": [
+              "9318-7"
+            ],
+            "label": "UACR",
+            "unit": "mg/g",
+            "min": 500,
+            "max": 5000,
+            "maxAgeDays": 180
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "reg-e1",
+          "kind": "exclusion",
+          "text": "Known medical history or clinical evidence indicative of non-diabetic renal disease",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has kidney disease that is not caused by diabetes.",
+            "terms": [
+              "kidney",
+              "renal",
+              "nephro",
+              "glomerul",
+              "albuminuria"
+            ]
+          },
+          "ask": "Has a doctor told you your kidney disease has a cause other than diabetes?"
+        },
+        {
+          "id": "reg-e2",
+          "kind": "exclusion",
+          "text": "Renal disease that required systemic immunosuppressive therapy, or end-stage kidney disease requiring chronic dialysis or kidney transplantation",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "condition",
+                "codes": [
+                  "46177005"
+                ],
+                "label": "End-stage renal disease"
+              },
+              {
+                "type": "notes",
+                "statement": "The patient is on dialysis, has had a kidney transplant, or received immunosuppressive therapy for kidney disease.",
+                "terms": [
+                  "dialysis",
+                  "transplant",
+                  "immunosuppress"
+                ]
+              }
+            ]
+          },
+          "ask": "Are you on dialysis, have you had a kidney transplant, or been given immune-suppressing treatment for your kidneys?"
+        },
+        {
+          "id": "reg-e3",
+          "kind": "exclusion",
+          "text": "Medically unstable as assessed by the investigator or hospitalization (>24 hours) within 30 days of the screening visit",
+          "rule": {
+            "type": "ask"
+          },
+          "ask": "Have you stayed in hospital overnight in the last 30 days?"
+        }
+      ]
+    },
+    {
+      "nctId": "NCT07595549",
+      "title": "Berobenatide (PF-08653944) in people with overweight or obesity",
+      "sponsor": "Pfizer",
+      "phase": "Phase 3",
+      "criteria": [
+        {
+          "id": "pf-i1",
+          "kind": "inclusion",
+          "text": "Aged ≥18 years.",
+          "rule": {
+            "type": "age",
+            "min": 18
+          }
+        },
+        {
+          "id": "pf-i2",
+          "kind": "inclusion",
+          "text": "BMI of ≥30 kg/m2, or ≥27.0 to <30.0 kg/m2 with at least 1 weight-related co-morbidity: hypertension, dyslipidemia, obstructive sleep apnea, cardiovascular disease, or T2D.",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "lab",
+                "codes": [
+                  "39156-5"
+                ],
+                "label": "BMI",
+                "unit": "kg/m2",
+                "min": 30,
+                "maxAgeDays": 365
+              },
+              {
+                "type": "allOf",
+                "rules": [
+                  {
+                    "type": "lab",
+                    "codes": [
+                      "39156-5"
+                    ],
+                    "label": "BMI",
+                    "unit": "kg/m2",
+                    "min": 27,
+                    "maxExclusive": 30,
+                    "maxAgeDays": 365
+                  },
+                  {
+                    "type": "condition",
+                    "codes": [
+                      "38341003",
+                      "55822004",
+                      "78275009",
+                      "53741008",
+                      "44054006"
+                    ],
+                    "label": "Hypertension, dyslipidemia, sleep apnea, CVD or T2D"
+                  }
+                ]
+              }
+            ]
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "pf-e1",
+          "kind": "exclusion",
+          "text": "Self-reported body weight change greater than 5% within 90 days prior to Screening.",
+          "rule": {
+            "type": "weightChange",
+            "days": 90,
+            "maxPct": 5
+          },
+          "ask": "Has your weight changed by more than 5% in the last 3 months?"
+        },
+        {
+          "id": "pf-e2",
+          "kind": "exclusion",
+          "text": "Diagnosis of type 1 diabetes or any other form of diabetes other than T2D.",
+          "rule": {
+            "type": "condition",
+            "codes": [
+              "46635009"
+            ],
+            "label": "Type 1 diabetes"
+          }
+        },
+        {
+          "id": "pf-e3",
+          "kind": "exclusion",
+          "text": "History of acute or chronic pancreatitis.",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "condition",
+                "codes": [
+                  "197456007",
+                  "235494005"
+                ],
+                "label": "Pancreatitis"
+              },
+              {
+                "type": "notes",
+                "statement": "The patient has a history of pancreatitis.",
+                "terms": [
+                  "pancreatitis"
+                ]
+              }
+            ]
+          },
+          "ask": "Have you ever had pancreatitis?"
+        },
+        {
+          "id": "pf-e4",
+          "kind": "exclusion",
+          "text": "Personal or family history of medullary thyroid carcinoma (MTC) or multiple endocrine neoplasia type 2 (MEN-2).",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient or a family member has had medullary thyroid cancer or multiple endocrine neoplasia type 2 (MEN2).",
+            "terms": [
+              "medullary thyroid",
+              "MTC",
+              "MEN2",
+              "MEN 2",
+              "multiple endocrine",
+              "thyroid cancer",
+              "thyroid carcinoma"
+            ]
+          },
+          "ask": "Have you or anyone in your family had medullary thyroid cancer or MEN2?"
+        }
+      ]
+    },
+    {
+      "nctId": "NCT07871409",
+      "title": "Home self-administration of maridebart cafraglutide with an autoinjector in obesity or overweight",
+      "sponsor": "Amgen",
+      "phase": "Phase 3",
+      "criteria": [
+        {
+          "id": "am-i0",
+          "kind": "inclusion",
+          "text": "Age 18 to 99 years",
+          "rule": {
+            "type": "age",
+            "min": 18,
+            "max": 99
+          }
+        },
+        {
+          "id": "am-i1",
+          "kind": "inclusion",
+          "text": "BMI ≥ 30 kg/m^2, or BMI ≥ 27 to < 30 kg/m^2 with hypertension, dyslipidemia, obstructive sleep apnea, cardiovascular disease or fatty liver disease",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "lab",
+                "codes": [
+                  "39156-5"
+                ],
+                "label": "BMI",
+                "unit": "kg/m2",
+                "min": 30,
+                "maxAgeDays": 365
+              },
+              {
+                "type": "allOf",
+                "rules": [
+                  {
+                    "type": "lab",
+                    "codes": [
+                      "39156-5"
+                    ],
+                    "label": "BMI",
+                    "unit": "kg/m2",
+                    "min": 27,
+                    "maxExclusive": 30,
+                    "maxAgeDays": 365
+                  },
+                  {
+                    "type": "condition",
+                    "codes": [
+                      "38341003",
+                      "55822004",
+                      "78275009",
+                      "53741008",
+                      "197321007"
+                    ],
+                    "label": "Hypertension, dyslipidemia, sleep apnea, CVD or fatty liver"
+                  }
+                ]
+              }
+            ]
+          },
+          "fallback": "screening"
+        },
+        {
+          "id": "am-i2",
+          "kind": "inclusion",
+          "text": "At least 1 unsuccessful attempt at weight loss by diet and exercise.",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has tried to lose weight with diet or exercise without lasting success.",
+            "terms": [
+              "diet",
+              "lifestyle",
+              "weight loss",
+              "exercise",
+              "walking",
+              "programme",
+              "program"
+            ]
+          },
+          "ask": "Have you tried to lose weight with diet and exercise before, without lasting success?"
+        },
+        {
+          "id": "am-i3",
+          "kind": "inclusion",
+          "text": "Contraception for females.",
+          "rule": {
+            "type": "ask",
+            "appliesTo": "female"
+          },
+          "ask": "If you could become pregnant, are you willing to use contraception during the trial?"
+        },
+        {
+          "id": "am-i4",
+          "kind": "inclusion",
+          "text": "Willingness to follow trial procedures for the duration of the trial.",
+          "rule": {
+            "type": "site",
+            "reason": "Discussed at the consent visit"
+          }
+        },
+        {
+          "id": "am-e1",
+          "kind": "exclusion",
+          "text": "Obesity induced by other endocrinologic disorders.",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient's obesity is caused by an endocrine disorder.",
+            "terms": [
+              "endocrine",
+              "thyroid function",
+              "cushing",
+              "hypothyroid",
+              "hormone"
+            ]
+          },
+          "ask": "Has a doctor said your weight is caused by a hormone condition (for example thyroid or Cushing's)?"
+        },
+        {
+          "id": "am-e2",
+          "kind": "exclusion",
+          "text": "Change in body weight > 5 kg within last 90 days.",
+          "rule": {
+            "type": "weightChange",
+            "days": 90,
+            "maxKg": 5
+          },
+          "ask": "Has your weight changed by more than 5 kg in the last 3 months?"
+        },
+        {
+          "id": "am-e3",
+          "kind": "exclusion",
+          "text": "Previous or planned surgical, endoscopic, or device-based treatment for obesity.",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has had or is planning weight-loss surgery, an endoscopic procedure or a weight-loss device.",
+            "terms": [
+              "bariatric",
+              "gastric bypass",
+              "sleeve",
+              "gastric band",
+              "weight-loss device",
+              "weight-loss surgery",
+              "balloon",
+              "endoscopic"
+            ]
+          },
+          "ask": "Have you had, or are you planning, weight-loss surgery or a weight-loss device?"
+        },
+        {
+          "id": "am-e4",
+          "kind": "exclusion",
+          "text": "History of malignancy within the past 5 years.",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient has had cancer in the past 5 years.",
+            "terms": [
+              "cancer",
+              "carcinoma",
+              "malignan",
+              "tumour",
+              "tumor",
+              "lymphoma",
+              "leukaemia",
+              "leukemia",
+              "oncolog",
+              "chemotherapy"
+            ]
+          },
+          "ask": "Have you been diagnosed with or treated for cancer in the past 5 years?"
+        },
+        {
+          "id": "am-e5",
+          "kind": "exclusion",
+          "text": "Type 1 or Type 2 diabetes mellitus.",
+          "rule": {
+            "type": "condition",
+            "codes": [
+              "44054006",
+              "46635009"
+            ],
+            "label": "Type 1 or type 2 diabetes"
+          }
+        },
+        {
+          "id": "am-e6",
+          "kind": "exclusion",
+          "text": "History of chronic pancreatitis or history of acute pancreatitis within last 180 days.",
+          "rule": {
+            "type": "anyOf",
+            "rules": [
+              {
+                "type": "condition",
+                "codes": [
+                  "197456007",
+                  "235494005"
+                ],
+                "label": "Pancreatitis"
+              },
+              {
+                "type": "notes",
+                "statement": "The patient has a history of pancreatitis.",
+                "terms": [
+                  "pancreatitis"
+                ]
+              }
+            ]
+          },
+          "ask": "Have you ever had pancreatitis?"
+        },
+        {
+          "id": "am-e7",
+          "kind": "exclusion",
+          "text": "Family or personal history of medullary thyroid cancer.",
+          "rule": {
+            "type": "notes",
+            "statement": "The patient or a family member has had medullary thyroid cancer.",
+            "terms": [
+              "medullary thyroid",
+              "MTC",
+              "MEN2",
+              "MEN 2",
+              "multiple endocrine",
+              "thyroid cancer",
+              "thyroid carcinoma"
+            ]
+          },
+          "ask": "Have you or anyone in your family had medullary thyroid cancer?"
+        },
+        {
+          "id": "am-e8",
+          "kind": "exclusion",
+          "text": "Previous participation in a Maridebart Cafraglutide trial.",
+          "rule": {
+            "type": "ask"
+          },
+          "ask": "Have you taken part in a maridebart cafraglutide (MariTide) trial before?"
+        }
+      ]
+    }
+  ]
+}

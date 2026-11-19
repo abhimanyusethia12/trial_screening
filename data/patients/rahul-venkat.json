@@ -1,0 +1,401 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p-rahul",
+        "name": [
+          {
+            "given": [
+              "Rahul"
+            ],
+            "family": "Venkat",
+            "text": "Rahul Venkat"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1964-07-09",
+        "meta": {
+          "tag": [
+            {
+              "code": "synthetic",
+              "display": "Synthetic test patient"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d7d8ee9e-5368-40ad-b4fe-64745fea05b1",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "onsetDateTime": "2012-02-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1e8cfbe2-c353-4d84-886b-9c617ffe7e75",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "127013003",
+              "display": "Diabetic nephropathy"
+            }
+          ],
+          "text": "Diabetic nephropathy"
+        },
+        "onsetDateTime": "2021-06-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "94671ef6-b8a7-498f-88fc-bcd34ce865bb",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433144002",
+              "display": "Chronic kidney disease stage 3"
+            }
+          ],
+          "text": "Chronic kidney disease stage 3"
+        },
+        "onsetDateTime": "2021-06-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "4ebd65db-2059-499a-945d-0dc71e583400",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertension"
+            }
+          ],
+          "text": "Hypertension"
+        },
+        "onsetDateTime": "2010-03-03"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "719eaba5-9c01-4d37-b268-b8b0945284cd",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "valueQuantity": {
+          "value": 8.9,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "efd99c26-13af-4f37-b02a-0fc8d7ac83db",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "valueQuantity": {
+          "value": 28.9,
+          "unit": "kg/m2"
+        },
+        "effectiveDateTime": "2026-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7ca63132-a1fb-4f63-b60b-9ea2f405e974",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-06-20"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ef84662c-b935-4b65-ae21-4b7ed6b01d08",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 87.4,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "05ad25d1-efdf-4bae-bce8-bde45951dff5",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "62238-1",
+              "display": "eGFR (CKD-EPI)"
+            }
+          ],
+          "text": "eGFR (CKD-EPI)"
+        },
+        "valueQuantity": {
+          "value": 48,
+          "unit": "mL/min/1.73m2"
+        },
+        "effectiveDateTime": "2026-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0783bfbb-1715-4a4e-af31-f0717b167df6",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9318-7",
+              "display": "Urine albumin/creatinine ratio"
+            }
+          ],
+          "text": "Urine albumin/creatinine ratio"
+        },
+        "valueQuantity": {
+          "value": 1240,
+          "unit": "mg/g"
+        },
+        "effectiveDateTime": "2026-09-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "29587a79-e405-464b-95fa-181a9e79ab28",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "6809",
+              "display": "Metformin 500 mg twice daily"
+            }
+          ],
+          "text": "Metformin 500 mg twice daily"
+        },
+        "effectivePeriod": {
+          "start": "2012-03-01"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "020e966d-c4d8-4647-af35-6d41a6bc08a5",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "274783",
+              "display": "Insulin glargine 24 units nightly"
+            }
+          ],
+          "text": "Insulin glargine 24 units nightly"
+        },
+        "effectivePeriod": {
+          "start": "2018-01-10"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "2626c6f8-544d-4039-8dc7-ac2525fee096",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1545653",
+              "display": "Empagliflozin 10 mg daily"
+            }
+          ],
+          "text": "Empagliflozin 10 mg daily"
+        },
+        "effectivePeriod": {
+          "start": "2022-02-01"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "db0faa4f-5104-4aab-b20f-9caa777473bb",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "29046",
+              "display": "Lisinopril 20 mg daily"
+            }
+          ],
+          "text": "Lisinopril 20 mg daily"
+        },
+        "effectivePeriod": {
+          "start": "2010-03-03"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "77da8f17-e1c9-42f8-a038-d43ee578769c",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/p-rahul"
+        },
+        "description": "Nephrology follow-up",
+        "date": "2026-09-15",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "TmVwaHJvbG9neSBmb2xsb3ctdXAsIDE1IFNlcCAyMDI2LiBMb25nLXN0YW5kaW5nIHR5cGUgMiBkaWFiZXRlcyAoc2luY2UgMjAxMikgd2l0aCBkaWFiZXRpYyBraWRuZXkgZGlzZWFzZTsgYWxidW1pbnVyaWEgYXR0cmlidXRlZCB0byBkaWFiZXRpYyBuZXBocm9wYXRoeS4gTm90IG9uIGRpYWx5c2lzOyBubyBraWRuZXkgdHJhbnNwbGFudDsgbmV2ZXIgcmVjZWl2ZWQgaW1tdW5vc3VwcHJlc3NpdmUgdGhlcmFweS4gT25lIGVwaXNvZGUgb2Ygc2V2ZXJlIGh5cG9nbHljZW1pYSBpbiBNYXJjaCAyMDI2IHJlcXVpcmluZyBoZWxwIGZyb20gaGlzIHdpZmUgYWZ0ZXIgYW4gaW5zdWxpbiBkb3NlIGVycm9yLiBGYXRoZXIgd2FzIGRpYWdub3NlZCB3aXRoIG1lZHVsbGFyeSB0aHlyb2lkIGNhcmNpbm9tYSBhdCBhZ2UgNTguIE5vIGhpc3Rvcnkgb2YgcGFuY3JlYXRpdGlzLiBObyBob3NwaXRhbCBhZG1pc3Npb25zIGluIHRoZSBwYXN0IHllYXIu"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

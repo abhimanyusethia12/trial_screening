@@ -1,0 +1,326 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p-elena",
+        "name": [
+          {
+            "given": [
+              "Elena"
+            ],
+            "family": "Marsh",
+            "text": "Elena Marsh"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1972-03-14",
+        "meta": {
+          "tag": [
+            {
+              "code": "synthetic",
+              "display": "Synthetic test patient"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "2c902e2b-3655-41cb-9d7b-b06a7f07dfe8",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "onsetDateTime": "2019-05-02"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "908697f8-6e4d-4174-b2f7-5366dcc36f84",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertension"
+            }
+          ],
+          "text": "Hypertension"
+        },
+        "onsetDateTime": "2017-09-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c76662a1-278b-42a1-8d5d-dea3517f5c49",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "valueQuantity": {
+          "value": 8.2,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-10-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f457fd6a-5acf-4008-929a-f81eeb3d08f8",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "valueQuantity": {
+          "value": 8.0,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-04-22"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d2d08568-ed43-4899-b8f1-06020a575e8c",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "valueQuantity": {
+          "value": 33.4,
+          "unit": "kg/m2"
+        },
+        "effectiveDateTime": "2026-10-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e357085d-e565-4d61-8e15-c51dcff66a7d",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 92.1,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-08-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1755ee7c-40bf-4e54-a6db-3cff0596479c",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "valueQuantity": {
+          "value": 92.8,
+          "unit": "kg"
+        },
+        "effectiveDateTime": "2026-10-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d3f01d3f-7812-4117-823b-a1275caf03fe",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "62238-1",
+              "display": "eGFR (CKD-EPI)"
+            }
+          ],
+          "text": "eGFR (CKD-EPI)"
+        },
+        "valueQuantity": {
+          "value": 82,
+          "unit": "mL/min/1.73m2"
+        },
+        "effectiveDateTime": "2026-10-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "753b8c83-f2d3-4d03-88f3-0f81c181767d",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9318-7",
+              "display": "Urine albumin/creatinine ratio"
+            }
+          ],
+          "text": "Urine albumin/creatinine ratio"
+        },
+        "valueQuantity": {
+          "value": 18,
+          "unit": "mg/g"
+        },
+        "effectiveDateTime": "2026-10-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "bf22a147-a180-4b3a-a8fa-01bb1499eca2",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "6809",
+              "display": "Metformin 1000 mg twice daily"
+            }
+          ],
+          "text": "Metformin 1000 mg twice daily"
+        },
+        "effectivePeriod": {
+          "start": "2019-05-20"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "f1b8a002-d23e-4548-a0f3-1bf7183477fb",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "29046",
+              "display": "Lisinopril 10 mg daily"
+            }
+          ],
+          "text": "Lisinopril 10 mg daily"
+        },
+        "effectivePeriod": {
+          "start": "2017-09-10"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "9eb0f7c2-bec1-4716-81ae-c589d25dd0ad",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/p-elena"
+        },
+        "description": "Annual diabetes review",
+        "date": "2026-10-28",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "QW5udWFsIGRpYWJldGVzIHJldmlldywgMjggT2N0IDIwMjYuIFR5cGUgMiBkaWFiZXRlcyBkaWFnbm9zZWQgMjAxOSwgb24gbWV0Zm9ybWluIDEwMDAgbWcgdHdpY2UgZGFpbHkgd2l0aCBubyBkb3NlIGNoYW5nZSBzaW5jZSAyMDI0LiBObyBlcGlzb2RlcyBvZiBzZXZlcmUgaHlwb2dseWNlbWlhOyByZWNvZ25pc2VzIGh5cG9nbHljZW1pYSBzeW1wdG9tcy4gRGlsYXRlZCBleWUgZXhhbSBKdW5lIDIwMjY6IG5vIGRpYWJldGljIHJldGlub3BhdGh5LCBubyB0cmVhdG1lbnQgbmVlZGVkLiBEZW5pZXMgaGlzdG9yeSBvZiBwYW5jcmVhdGl0aXMuIE5vIGdhc3Ryb2ludGVzdGluYWwgY29tcGxhaW50cy4gRmFtaWx5IGhpc3Rvcnk6IG1vdGhlciB3aXRoIGh5cG90aHlyb2lkaXNtOyBubyBmYW1pbHkgaGlzdG9yeSBvZiB0aHlyb2lkIGNhbmNlci4gTm8gaGlzdG9yeSBvZiBoZWFydCBmYWlsdXJlLg=="
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
