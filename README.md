@@ -3,6 +3,8 @@
 A patient's health record is checked against real trial eligibility criteria **inside the browser tab**.
 Nothing is uploaded. Only a consented, per-criterion summary is sent to the trial site.
 
+**Live:** https://screening.abhimanyusethia.com ([patient app](https://screening.abhimanyusethia.com/patient), [site console](https://screening.abhimanyusethia.com/site)). Use Chrome or Brave on a laptop; the first visit downloads the model (about 2 GB).
+
 ## Run
 
 ```
@@ -44,6 +46,12 @@ npm run test:engine   # engine on 3 patients × 5 trials (Node, no model)
 npm run test:notes    # notes model accuracy against data/notes-eval.json
 OUT=/tmp/shots npm run test:e2e   # full patient flow ×3 and the site console, with screenshots
 ```
+
+`BASE=https://screening.abhimanyusethia.com npm run test:e2e` runs the same flow against the live site.
+
+## Deploy
+
+`npm run deploy` copies the public files to `dist/` and deploys them to Cloudflare as a static Worker (`cloudflare.config.ts`, via the `cf` CLI) on screening.abhimanyusethia.com.
 
 ## Files
 

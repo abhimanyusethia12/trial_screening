@@ -4,7 +4,7 @@
 import puppeteer from "puppeteer-core";
 
 const OUT = process.env.OUT || ".";
-const BASE = "http://127.0.0.1:8080";
+const BASE = process.env.BASE || "http://127.0.0.1:8080";
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
   headless: true, userDataDir: process.env.SHOT_PROFILE || "/private/tmp/claude-502/brave-profile",
