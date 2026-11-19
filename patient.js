@@ -1,6 +1,6 @@
 import { parseBundle, evalTrial, buildReferral } from "./engine.js";
 import { loadModel, askModel, hasWebGPU, isReady, MODEL_LABEL } from "./model.js";
-import { getActiveTrials, addReferral, logEvent, newSessionId } from "./store.js";
+import { getActiveTrials, addReferral, logEvent, newSessionId, resetAll } from "./store.js";
 
 const SAMPLES = [
   { id: "elena-marsh", name: "Elena Marsh", line: "54, type 2 diabetes" },
@@ -246,7 +246,7 @@ function results() {
     <p class="note-box">Checked on this device${S.requests === 0 ? " with 0 network requests" : ""}. ${S.notesRead ? "Your clinic notes were read by a model running on this device." : "Your clinic notes were not read on this device."} Your record was not uploaded.</p>
     <button class="btn" id="restart">Start over</button>`;
   app.querySelectorAll("[data-share]").forEach((b) => b.addEventListener("click", () => share(b.dataset.share)));
-  app.querySelector("#restart").addEventListener("click", welcome);
+  app.querySelector("#restart").addEventListener("click", () => { history.replaceState(null, "", location.pathname); welcome(); });
   scrollTo(0, 0);
 }
 
@@ -318,13 +318,16 @@ function sent(nct) {
       <li><span class="n">3</span><span>${visit.length ? `At the visit they check ${plural(visit.length, "thing")} your record couldn’t confirm:<ul class="list">${visit.map((c) => `<li>${esc(c.text)}</li>`).join("")}</ul>` : "At the visit they confirm your results with tests of their own."}</span></li>
       <li><span class="n">4</span><span>Taking part is always your choice. You can say no at any point.</span></li>
     </ol>
-    <button class="btn" id="back">Back to results</button>`;
+    <button class="btn" id="back">Back to results</button>
+    <button class="btn link" id="restart">Start over with another record</button>`;
   app.querySelector("#back").addEventListener("click", results);
+  app.querySelector("#restart").addEventListener("click", () => { history.replaceState(null, "", location.pathname); welcome(); });
   scrollTo(0, 0);
 }
 
 // ---------- boot ----------
 reset();
+if (location.hash === "#reset") { resetAll(); history.replaceState(null, "", location.pathname); }
 const sample = new URLSearchParams(location.hash.slice(1)).get("sample");
 if (sample && SAMPLES.some((s) => s.id === sample)) {
   fetch(`data/patients/${sample}.json`, { cache: "no-cache" }).then((r) => r.json()).then((b) => start(b, "sample"));

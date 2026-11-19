@@ -427,5 +427,6 @@ async function render() {
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => { view.tab = b.dataset.view; if (view.tab !== "trials") view.adding = false; location.hash = view.tab; render(); }));
 $("#reset").addEventListener("click", () => { if (confirm("Clear all referrals, activity and trial changes in this prototype?")) { resetAll(); view.ref = view.nct = view.session = null; render(); } });
 onChange(() => { if (!view.adding) render(); });
+if (location.hash === "#reset") { resetAll(); history.replaceState(null, "", location.pathname); }
 if (["inbox", "trials", "activity"].includes(location.hash.slice(1))) view.tab = location.hash.slice(1);
 render();
