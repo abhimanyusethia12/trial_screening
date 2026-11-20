@@ -1,4 +1,4 @@
-"""Generate synthetic FHIR R4 bundles for the prototype.
+"""Generate synthetic FHIR R4 bundles for the sample patients.
 
 All patients are fictional. Run: python3 tools/make_patients.py
 """

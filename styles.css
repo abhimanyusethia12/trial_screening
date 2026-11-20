@@ -119,3 +119,4 @@ pre.payload { font-family: var(--mono); font-size: 11.5px; background: var(--bg)
 .notice { padding: 10px 12px; border: 1px solid var(--line-strong); border-left: 3px solid var(--met); border-radius: var(--radius); background: var(--surface); margin-top: 10px; }
 .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; margin: 4px 0 12px; }
 .legend .st { font-weight: 500; }
+.brand-link { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }

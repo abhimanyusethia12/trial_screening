@@ -1,4 +1,4 @@
-# Prescreen: on-device clinical trial pre-screening (prototype)
+# Prescreen: on-device clinical trial pre-screening
 
 A patient's health record is checked against real trial eligibility criteria **inside the browser tab**.
 Nothing is uploaded. Only a consented, per-criterion summary is sent to the trial site.
@@ -19,7 +19,6 @@ Open in **Brave or Chrome** (the notes model needs WebGPU):
 | `/patient.html` | Patient (mobile) | Add a record → check on device → questions one at a time → submit → results and next steps → consent and send |
 | `/site.html` | Site coordinator | Referrals to contact (with full evaluation), trials (pause/resume, criteria, add from ClinicalTrials.gov), anonymous activity log |
 | `/demo.html` | Recording | Patient app in a phone frame beside the site console, in one tab |
-| `/legacy.html` | Demo detail | Every criterion, compiled check and evidence for one patient |
 
 First run downloads the model (Qwen2.5 3B, about 2 GB) once; after that it starts in a few seconds and works offline.
 Open the two apps in two windows of the **same browser**: they share its storage in place of a server.
@@ -59,7 +58,7 @@ OUT=/tmp/shots npm run test:e2e   # full patient flow ×3 and the site console, 
 - `engine.js`: FHIR parsing, rule evaluation, referral payload (no network calls)
 - `model.js`: on-device model, retrieval and guardrails
 - `store.js`: shared trials, referrals and anonymous activity events
-- `patient.*`, `site.*`: the two apps; `app.js` + `legacy.html`: detailed view
+- `patient.*`, `site.*`: the two apps
 - `data/trials.json`: compiled criteria; `data/notes-eval.json`: labelled notes test set
 - `vendor/web-llm.js`: WebLLM 0.2.87, served locally so the page works offline
 

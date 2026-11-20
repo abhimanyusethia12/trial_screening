@@ -8,7 +8,7 @@
 // A miss in either step becomes a question for the patient, never a silent pass.
 
 export const MODEL_ID = "Qwen2.5-3B-Instruct-q4f16_1-MLC";
-export const MODEL_LABEL = "Qwen2.5 3B";
+export const MODEL_LABEL = "Prescreen Intelligence";
 
 let engine = null;
 let loading = null;

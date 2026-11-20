@@ -285,7 +285,7 @@ function renderAddTrial() {
     </div>
     <p class="form-msg ${kind}">${esc(text)}</p>
     <h3>Criteria (${draft.criteria.length})</h3>
-    <p class="hint">For each criterion, choose how it can be checked before the visit. Anything you can’t automate stays “At screening visit”. Prototype: compiling is manual; the product would draft these checks for review.</p>
+    <p class="hint">For each criterion, choose how it can be checked before the visit. Anything you can’t automate stays “At screening visit”.</p>
     ${draft.criteria.map((r, i) => `<div class="crit-row">
       <label class="field">Type<select data-i="${i}" data-k="kind"><option value="inclusion"${r.kind === "inclusion" ? " selected" : ""}>Inclusion</option><option value="exclusion"${r.kind === "exclusion" ? " selected" : ""}>Exclusion</option></select></label>
       <label class="field">Registry text<textarea data-i="${i}" data-k="text" rows="2">${esc(r.text)}</textarea></label>
@@ -425,7 +425,7 @@ async function render() {
   else renderActivity();
 }
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => { view.tab = b.dataset.view; if (view.tab !== "trials") view.adding = false; location.hash = view.tab; render(); }));
-$("#reset").addEventListener("click", () => { if (confirm("Clear all referrals, activity and trial changes in this prototype?")) { resetAll(); view.ref = view.nct = view.session = null; render(); } });
+$("#reset").addEventListener("click", () => { if (confirm("Clear all referrals, activity and trial changes?")) { resetAll(); view.ref = view.nct = view.session = null; render(); } });
 onChange(() => { if (!view.adding) render(); });
 if (location.hash === "#reset") { resetAll(); history.replaceState(null, "", location.pathname); }
 if (["inbox", "trials", "activity"].includes(location.hash.slice(1))) view.tab = location.hash.slice(1);

@@ -1,5 +1,5 @@
 // Shared state between the patient app and the site console.
-// Prototype: both apps run on the same origin, so localStorage stands in for the site's server.
+// Both apps run on the same origin, so localStorage stands in for the site's server.
 // In production, only referrals (on consent) and the anonymous activity events would travel to the site.
 
 const KEYS = { trials: "prescreen.trials.v1", referrals: "prescreen.referrals.v1", log: "prescreen.log.v1" };

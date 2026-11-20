@@ -70,7 +70,7 @@ function welcome() {
     <details><summary>No record to hand? Try a sample patient</summary>
       <div class="samples">${SAMPLES.map((s) => `<button class="sample" data-id="${s.id}"><strong>${esc(s.name)}</strong><span>${esc(s.line)} · synthetic record</span></button>`).join("")}</div>
     </details>
-    <p class="note-box">Prototype. Sample records are fictional. Trials are real listings from ClinicalTrials.gov.</p>`;
+    <p class="note-box">Sample records are fictional. Trials are real listings from ClinicalTrials.gov.</p>`;
   app.querySelector("#file").addEventListener("change", async (ev) => {
     const f = ev.target.files[0]; if (!f) return;
     try { await start(JSON.parse(await f.text()), "upload"); }
